@@ -11,7 +11,7 @@
 </head>
 <body class="body1">
     <div class="container-fluid" >
-            <form action="Libro1.xlsx" method="post" enctype="multipart/form-data" onsubmit="exportarAExcel()">
+            <form action="index.php" method="post" enctype="multipart/form-data">
                 <label class="form-label">Registro</label>
                 <div>
                     <label class="form-label text-black">Nombre</label><br>
@@ -23,7 +23,7 @@
                 </div>
                 <div>
                     <label class="form-label text-black">Contraseña</label><br>
-                    <input required type="password" name="contraseña" id="contraseña">
+                    <input required type="password" name="Contraseña" id="Contraseña">
                 </div>
 
                 <div>
@@ -56,7 +56,7 @@
                 </div>
 
                 <div>
-                    <button type="submit" class="btn btn-primary m-3">Enviar</button>
+                    <button type="submit" class="btn btn-primary m-3" name="registro">Enviar</button>
                     <button type="reset" class="btn btn-success m-3">limpiar</button>
                 </div>
 
@@ -65,7 +65,7 @@
 
             </form>
     </div>
-
+    
     <script src="js/javaScript.js" ></script>
 </body>
 </html>
