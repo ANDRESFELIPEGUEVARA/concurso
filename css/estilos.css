@@ -15,86 +15,11 @@ body{
     align-items: center;
     height: 100vh;
 }
-.transormacion{
+.container_header{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    flex-direction: column;
-    gap: 15px;
 }
-ul{
-    list-style: disc;
-    color: red;
-}
-
-li{
-    padding: 10px;
-}
-
-.text_inicio{
-    text-decoration: none;
-    color: white;
-}
-
-
-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid white;
-    width: 300px;
-    padding: 20px; 
-    background-color: #ffff;
-    border-radius: 10px;
-    margin: auto;
-}
-.body1{
-    justify-content: center;
-    align-items: center;
-}
-input{
-    border: 1px solid black;
-    border-radius: 25px;
-    padding: 4px;
-    margin-top: 7px;
-    margin-bottom: 7px;
-}
-/*Empezando con cliente y conductor*/
-.imagen_clientelo{
-    width: 100px;
-}
-header{
-    position: fixed;
-    top: 0;
-    background-color: white;
-    width: 100%;
-    left: 0;
-    z-index: 1;
-}
-
-.ul{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    list-style: none;
-    transform: translateY(50%);
-}
-.text{
-    text-decoration: none;
-    color: black;
-}
-main{
-    margin-top: 940px;
-}
-
-.second_{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 50%;
-    transform: translateY(50%);
+.imagen_1{
+    padding: 0;
 }
