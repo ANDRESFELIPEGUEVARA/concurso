@@ -11,16 +11,69 @@
   </head>
   <body>
     <div class="container-fluid">
-      <section>
-        <div class="container_header">
-            <h1 id="title" class="py-5 text-center text-white" style="display: none;">GoCarg</h1>
-            <div class="row py-2">
-                <div class="col">
-                  <img src="img/logo 1.png" class="imagen_1" alt="" />
-                </div>
+
+      <section class="header">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </section>
+ 
+      <section class="img1"> 
+        <img class="img-fluid" src="img/logo.png" alt="Imagen de transporte de carga">
+      </section>
+
+      <section class="about" id="about">
+        <div class="about1">
+          <div class="col-6"></div>
+           <div id="segundo_js">
+             <h1 class="text-center pt-5">Quienes somos</h1>
+            <p class="fs-5 py-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex reiciendis veniam minus animi consequatur rerum ratione nesciunt, pariatur soluta fugiat assumenda quo et tenetur doloribus quia aperiam dolores eum. Fugiat?</p>
+            <div class="btn">
+              <a class="btn btn-primary m-auto" href="#about" onclick="alternar()">Saber mas</a>
+            </div>
+           </div>
+          </div>
+            <div class="col-6">
+              <div id="primer_js">
+                <img class="img-fluid" src="img/logo 1.png" alt="">
+              </div>
             </div>
         </div>
       </section>
+
     </div>
+
+    <script src="js/javaScript.js"></script>
   </body>
 </html>

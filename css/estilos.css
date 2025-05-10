@@ -10,16 +10,29 @@
 
 body{
     background-color: #4261d3;
+  
+}
+
+.header{
+    position: fixed;
+    width: 100%;
+}
+
+.img1{
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    top: 0;
 }
-.container_header{
+
+.about{
     display: flex;
-    justify-content: center;
-    align-items: center;
+     background-color: white;
+    border: 1px solid black;
+    
 }
-.imagen_1{
-    padding: 0;
+
+.btn{
+    display: block;
+    width: 100px;
+    margin: auto;
 }

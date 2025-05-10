@@ -1,41 +1,27 @@
-function cambiar(){
-    if (document.getElementById('Tipo_persona').value==='conductor'){
-        document.getElementById('mostrar').style.display='block'
-    }else {
-        document.getElementById('mostrar').style.display='none'
-    }
-}
+function alternar() {
 
-function iniciarSesion(event) {
-    event.preventDefault();
-    if(document.getElementById('email').value==='1234@gmail.com'  &&  document.getElementById('contraseña').value==='12345'){
-        window.location.href = 'cliente.html';    
-    }else if(document.getElementById('email').value==='123@gmail.com' && document.getElementById('contraseña').value==='123456'){
-        window.location.href='conductor.html'
-    }else{
-        alert("Contraseña o Usuario incorrecto")
+    let cambio = `
+        <h1 class="text-center pt-5">Que bueno que te interesa</h1>
+        <p class="fs-5 py-5">Pues mira nosotros somos mas que solo un medio de contacto, a traves de nuestra app no solo podras escojer tu conductor de preferencia si no que ademas tendras un seguimiento en tiempo real de tu pedido y podras relizar pagos por la misma app </p>
+        <a class="btn btn-primary m-auto" href="#about" onclick="alternarMenos()">menos</a>
+        `;
 
-    }   
-}
+    let segundoCambio =`<img class="img-fluid" src="img/logo 1.png" alt="">`
 
-function exportarAExcel() {
-    if (typeof XLSX === 'undefined') {
-        alert("La biblioteca SheetJS no está incluida. Asegúrate de agregarla en tu archivo HTML.");
-        return;
-    }
+    window.alternarMenos = function() {
+        document.getElementById('primer_js').innerHTML = `
+            <img class="img-fluid" src="img/logo 1.png" alt="">
+        `;
+        document.getElementById('segundo_js').innerHTML = `
+             <h1 class="text-center pt-5">Quienes somos</h1>
+            <p class="fs-5 py-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex reiciendis veniam minus animi consequatur rerum ratione nesciunt, pariatur soluta fugiat assumenda quo et tenetur doloribus quia aperiam dolores eum. Fugiat?</p>
+            <div class="btn">
+              <a class="btn btn-primary m-auto" href="#about" onclick="alternar()">Saber mas</a>
+            </div>
+        `;
+    };
 
-    const datos = [
-        ["Nombre", "Correo", "Contraseña"],
-        [
-            document.getElementById('nombre').value,
-            document.getElementById('email').value,
-            document.getElementById('contraseña').value
-        ]
-    ];
+    document.getElementById('primer_js').innerHTML=cambio
+    document.getElementById('segundo_js').innerHTML=segundoCambio
 
-    const hoja = XLSX.utils.aoa_to_sheet(datos);
-    const libro = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(libro, hoja, "Registro");
-
-    XLSX.writeFile(libro, "Libro.xlsx");
 }
