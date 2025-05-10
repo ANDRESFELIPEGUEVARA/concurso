@@ -14,43 +14,6 @@
       <section>
         <div class="container_header">
             <h1 id="title" class="py-5 text-center text-white" style="display: none;">GoCarg</h1>
-            <script>
-              document.addEventListener("DOMContentLoaded", () => {
-                const imagen = document.querySelector(".row .imagen_1");
-                imagen.style.position = "absolute";
-                imagen.style.left = "0";
-                imagen.style.top = "0";
-
-                let direccionX = 1;
-                let direccionY = 1;
-                let posicionX = 0;
-                let posicionY = 0;
-
-                const moverImagen = () => {
-                  posicionX += direccionX * 5;
-                  posicionY += direccionY * 5;
-                  imagen.style.left = `${posicionX}px`;
-                  imagen.style.top = `${posicionY}px`;
-
-                  if (posicionX >= window.innerWidth - imagen.offsetWidth || posicionX <= 0) {
-                    direccionX *= -1;
-                  }
-
-                  if (posicionY >= window.innerHeight - imagen.offsetHeight || posicionY <= 0) {
-                    direccionY *= -1;
-                  }
-
-                  if (posicionX === 0 && posicionY === 0) {
-                    imagen.style.display = "none";
-                    document.getElementById("title").style.display = "block";
-                  } else {
-                    requestAnimationFrame(moverImagen);
-                  }
-                };
-
-                moverImagen();
-              });
-            </script>
             <div class="row py-2">
                 <div class="col">
                   <img src="img/logo 1.png" class="imagen_1" alt="" />
